@@ -3,7 +3,7 @@ import { PeopleComponent } from './components/people/people.component';
 import { AboutComponent } from './components/about/about.component';
 
 export const routes: Routes = [
-  { path: 'people', component: PeopleComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'people', title: 'People', component: PeopleComponent },
+  { path: 'about', title: 'About', component: AboutComponent },
   { path: '**', redirectTo: '/people' },
 ];

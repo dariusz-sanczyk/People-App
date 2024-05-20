@@ -1,1 +1,8 @@
-<p>people works!</p>
+<div class="person-container">
+  <div class="img-container">
+    <img src="{{ personData.picture.large }}" alt="Picture is loading..." />
+  </div>
+  <p>Hi, My name is</p>
+  <h2>{{ personData.name.first }} {{ personData.name.last }}</h2>
+  <button (click)="getRandomPerson()" class="button">New</button>
+</div>

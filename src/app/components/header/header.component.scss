@@ -4,6 +4,9 @@ a {
   text-align: center;
   padding: 15px;
   color: rgb(16, 93, 238);
+  &:hover {
+    color: rgb(113, 160, 248);
+  }
 }
 
 li {
