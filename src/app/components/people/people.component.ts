@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PeopleService } from '../../services/people.service';
 import { Person } from '../../models/person.model';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-people',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './people.component.html',
   styleUrl: './people.component.scss',
 })
-export class PeopleComponent implements OnInit {
+export class PeopleComponent implements OnInit, OnDestroy {
   constructor(private peopleService: PeopleService) {}
 
   timeCounter: number = 0;
@@ -52,6 +51,10 @@ export class PeopleComponent implements OnInit {
   }
 
   public pauseTimer() {
+    clearInterval(this.interval);
+  }
+
+  ngOnDestroy(): void {
     clearInterval(this.interval);
   }
 }
