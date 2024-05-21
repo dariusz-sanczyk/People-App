@@ -32,14 +32,14 @@ export class PeopleComponent implements OnInit, OnDestroy {
     this.startCounter();
   }
 
-  public getRandomPerson() {
+  public getRandomPerson(): void {
     this.peopleService.getPersonNameAndPic().subscribe((data) => {
       this.personData = data.results[0];
       this.timeCounter = 0;
     });
   }
 
-  public startCounter() {
+  public startCounter(): void {
     this.interval = setInterval(() => {
       console.log(this.timeCounter);
       if (this.timeCounter === 4) {
@@ -50,7 +50,7 @@ export class PeopleComponent implements OnInit, OnDestroy {
     }, 1000);
   }
 
-  public pauseTimer() {
+  public pauseTimer(): void {
     clearInterval(this.interval);
   }
 

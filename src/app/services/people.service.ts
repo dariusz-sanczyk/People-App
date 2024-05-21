@@ -10,7 +10,11 @@ export class PeopleService {
 
   public getPersonNameAndPic(): Observable<any> {
     const attr = ['name', 'picture'];
-    const url = `https://randomuser.me/api/?inc=${attr.join(',')}`;
-    return this._http.get(url);
+    const url = 'https://randomuser.me/api/';
+    return this._http.get(url, {
+      params: {
+        inc: attr.join(','),
+      },
+    });
   }
 }
