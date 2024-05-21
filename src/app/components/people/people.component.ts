@@ -29,7 +29,7 @@ export class PeopleComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getRandomPerson();
-    this.startCounter();
+    this.startTimer();
   }
 
   public getRandomPerson(): void {
@@ -39,9 +39,8 @@ export class PeopleComponent implements OnInit, OnDestroy {
     });
   }
 
-  public startCounter(): void {
+  public startTimer(): void {
     this.interval = setInterval(() => {
-      console.log(this.timeCounter);
       if (this.timeCounter === 4) {
         this.getRandomPerson();
       } else {

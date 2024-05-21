@@ -2,18 +2,18 @@
   <div class="img-container">
     <img
       (mouseover)="pauseTimer()"
-      (mouseleave)="startCounter()"
+      (mouseleave)="startTimer()"
       src="{{ personData.picture.large }}"
       alt="Picture is loading..."
     />
   </div>
   <p>Hi, My name is</p>
-  <h2 (mouseover)="pauseTimer()" (mouseleave)="startCounter()">
+  <h2 (mouseover)="pauseTimer()" (mouseleave)="startTimer()">
     {{ personData.name.first }} {{ personData.name.last }}
   </h2>
   <button
     (mouseover)="pauseTimer()"
-    (mouseleave)="startCounter()"
+    (mouseleave)="startTimer()"
     (click)="getRandomPerson()"
     class="button"
   >
