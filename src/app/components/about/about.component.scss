@@ -1,12 +1,19 @@
-.about-container {
-  max-width: 720px;
-  margin: 0 auto;
-}
+.about {
+  ul {
+    padding-left: 0.5rem;
+    list-style-position: inside;
+  }
 
-footer {
-  margin-top: 48px;
-  color: rgb(172, 172, 172);
-  & a {
-    text-decoration: none;
+  & > * {
+    padding-bottom: 1rem;
+  }
+
+  footer {
+    margin-top: 48px;
+    color: rgb(172, 172, 172);
+
+    & a {
+      text-decoration: none;
+    }
   }
 }

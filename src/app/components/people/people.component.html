@@ -1,16 +1,18 @@
-<div class="person-container">
-  <div class="img-container">
-    <img
-      (mouseover)="pauseTimer()"
-      (mouseleave)="startTimer()"
-      src="{{ personData.picture.large }}"
-      alt="Picture is loading..."
-    />
-  </div>
-  <p>Hi, My name is</p>
-  <h2 (mouseover)="pauseTimer()" (mouseleave)="startTimer()">
-    {{ personData.name.first }} {{ personData.name.last }}
-  </h2>
+<section class="person container">
+  <article class="person__data">
+    <div class="img-container">
+      <img
+        (mouseover)="pauseTimer()"
+        (mouseleave)="startTimer()"
+        src="{{ personData.picture.large }}"
+        alt="User avatar"
+      />
+    </div>
+    <p>Hi, My name is</p>
+    <h1 (mouseover)="pauseTimer()" (mouseleave)="startTimer()">
+      {{ personData.name.first }} {{ personData.name.last }}
+    </h1>
+  </article>
   <button
     (mouseover)="pauseTimer()"
     (mouseleave)="startTimer()"
@@ -19,4 +21,4 @@
   >
     New
   </button>
-</div>
+</section>
