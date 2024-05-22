@@ -1,24 +1,21 @@
 <section class="person container">
   <article class="person__data">
-    <div class="img-container">
-      <img
-        (mouseover)="pauseTimer()"
-        (mouseleave)="startTimer()"
-        src="{{ personData.picture.large }}"
-        alt="User avatar"
-      />
+    <div
+      class="img-container"
+      (mouseover)="pauseTimer()"
+      (mouseleave)="startTimer()"
+    >
+      <img src="{{ personData.picture.large }}" alt="User avatar" />
     </div>
     <p>Hi, My name is</p>
     <h1 (mouseover)="pauseTimer()" (mouseleave)="startTimer()">
       {{ personData.name.first }} {{ personData.name.last }}
     </h1>
   </article>
-  <button
+  <app-button
     (mouseover)="pauseTimer()"
     (mouseleave)="startTimer()"
     (click)="getRandomPerson()"
-    class="button"
-  >
-    New
-  </button>
+    [buttonTitle]="buttonTitle"
+  ></app-button>
 </section>

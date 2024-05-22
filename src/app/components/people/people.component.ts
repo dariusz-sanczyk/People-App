@@ -1,17 +1,19 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PeopleService } from '../../services/people.service';
 import { Person } from '../../models/person.model';
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-people',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './people.component.html',
   styleUrl: './people.component.scss',
 })
 export class PeopleComponent implements OnInit, OnDestroy {
   constructor(private peopleService: PeopleService) {}
 
+  buttonTitle: string = 'New';
   timeCounter: number = 0;
   interval: any;
   personData: Person = {

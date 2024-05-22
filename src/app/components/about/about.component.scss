@@ -1,7 +1,8 @@
 .about {
   ul {
-    padding-left: 0.5rem;
-    list-style-position: inside;
+    list-style: initial;
+    margin: 1rem 0;
+    padding-left: 40px;
   }
 
   & > * {
@@ -9,7 +10,6 @@
   }
 
   footer {
-    margin-top: 48px;
     color: rgb(172, 172, 172);
 
     & a {
